@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Mochidoro · Support" data-zhhant="Mochidoro · 支援" data-ja="Mochidoro · サポート" data-ko="Mochidoro · 지원">Mochidoro · Support</title>
+<meta name="description" content="Help with Mochidoro: stickers, Plus, purchases, iCloud sync, notifications, widgets and Apple Watch.">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Noto+Sans+TC:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="i18n.js" defer></script>
+<script>
+  // The address shown in the Contact card. Empty means the card shows the GitHub link only.
+  const CONTACT_EMAIL = 'BrainGardenApp@gmail.com';
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.contact-mail').forEach(el => {
+      if (!CONTACT_EMAIL) { el.remove(); return; }
+      const a = el.querySelector('a'); a.href = 'mailto:' + CONTACT_EMAIL + '?subject=Mochidoro'; a.textContent = CONTACT_EMAIL;
+    });
+  });
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="img/icon.png" alt="">Mochidoro</a>
+    <nav class="langs" aria-label="Language"></nav>
+  </header>
+
+  <div class="hero">
+    <img src="img/cat-mail.png" alt="">
+    <div>
+      <h1><span data-lang="en">Support</span><span data-lang="zh-Hant">支援</span><span data-lang="ja">サポート</span><span data-lang="ko">지원</span></h1>
+      <p><span data-lang="en">Answers to the usual questions, and a way to reach a human.</span><span data-lang="zh-Hant">常見問題的答案，和找得到真人的方法。</span><span data-lang="ja">よくある質問への答えと、人に連絡する方法。</span><span data-lang="ko">자주 묻는 질문에 대한 답과, 사람에게 연락하는 방법.</span></p>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <div data-lang="en">
+    <p class="eyebrow">How it works</p>
+    <div class="card">
+      <details open><summary>How do I earn stickers?</summary><p>Every finished focus session drops a little shape into your jar. Reach your daily goal (set in minutes, in Me) and a cat drops in. Keep going and each further round of your goal earns another cat, up to three a day. Milestone cats arrive at 1, 7, 30, 50, 100, 200 and 365 cats.</p></details>
+      <details><summary>What are paw coins?</summary><p>You get one coin for every 25 minutes of focus in a day, plus one for the first session of the day. Tap Collect in the Shop once a day for one more (five with Plus). Coins buy copies of stickers you have already earned, for your Book. The jar only ever holds what you earned by focusing.</p></details>
+      <details><summary>What does Plus include?</summary><p>Seasonal stickers, three more companion cats, more jar looks, ambient sounds while you focus, extra paper for the Book, and five coins a day instead of one. Your daily sticker and the whole core loop are free forever.</p></details>
+      <details><summary>Can I change the focus length or my goal?</summary><p>Yes. Tap − or + beside the time on Today (5 to 90 minutes), or set everything in Me. A goal change applies from tomorrow if today already has focus time.</p></details>
+    </div>
+
+    <p class="eyebrow">Purchases</p>
+    <div class="card">
+      <details><summary>I bought Plus but it isn't active</summary><p>Open Me › Mochidoro Plus and tap <strong>Restore purchases</strong>. Make sure you are signed in to the same Apple Account you bought with. If a family member has to approve the purchase (Ask to Buy), Plus turns on by itself once approved.</p></details>
+      <details><summary>How do I cancel the subscription?</summary><p>Subscriptions are managed by Apple: open Settings › Apple Account › Subscriptions › Mochidoro, or ask for a refund at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. Cancelling keeps Plus until the end of the paid period.</p></details>
+      <details><summary>Coins I bought didn't arrive</summary><p>Reopen the app once; packs are credited as soon as the App Store confirms them. If they still don't show after a day, contact us with the order number from your Apple receipt.</p></details>
+    </div>
+
+    <p class="eyebrow">Devices and sync</p>
+    <div class="card">
+      <details><summary>iCloud sync between my iPhone and iPad</summary><p>Turn on iCloud for Mochidoro in Settings › Apple Account › iCloud › Saved to iCloud on every device. Sync runs in the background and can take a few minutes the first time. Nothing is stored on our servers; it is your private iCloud.</p></details>
+      <details><summary>Notifications don't arrive</summary><p>Check Settings › Notifications › Mochidoro is allowed. Focus modes can hide them; Mochidoro marks timer notifications as time-sensitive so they get through when your Focus allows time-sensitive ones.</p></details>
+      <details><summary>Widgets and Apple Watch</summary><p>Add the widgets from the widget gallery (long-press the Home Screen › +). Visit your jar once so the widget has a picture. The Watch app mirrors your timer; open Mochidoro on your iPhone once after installing it.</p></details>
+      <details><summary>The jar doesn't move when I tilt the phone</summary><p>The jar uses the motion sensor. It doesn't work in the Simulator or on devices without one; you can still tap stickers. In Low Power Mode it runs at a gentler frame rate.</p></details>
+    </div>
+
+    <p class="eyebrow">Your data</p>
+    <div class="card">
+      <details><summary>How do I delete everything?</summary><p>Delete the app. If iCloud sync was on, also remove Mochidoro's data in Settings › Apple Account › iCloud › Manage Storage. See the <a href="privacy.html">privacy policy</a>: we hold nothing of yours.</p></details>
+    </div>
+
+    <p class="eyebrow">Contact</p>
+    <div class="card">
+      <h2>Reach a human</h2>
+      <p class="contact-mail">Email: <a href="#">—</a></p>
+      <p>Found a bug or have an idea? Open an issue on <a href="https://github.com/chi0313/mochidoro-site/issues" target="_blank" rel="noopener">GitHub</a>. Please include your iPhone model and iOS version.</p>
+      <p>Terms: purchases are governed by <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple's standard EULA</a>.</p>
+    </div>
+  </div>
+
+  <!-- 繁體中文 -->
+  <div data-lang="zh-Hant">
+    <p class="eyebrow">怎麼玩</p>
+    <div class="card">
+      <details open><summary>貼紙怎麼拿？</summary><p>每完成一次專注，就有一個小圖形掉進罐子。達成每日目標（在「我」設定，以分鐘計）就會掉一隻貓；繼續專注，每再滿一輪目標再掉一隻，一天最多三隻。集到 1、7、30、50、100、200、365 隻貓時會有里程碑貓。</p></details>
+      <details><summary>貓掌幣是什麼？</summary><p>一天內每專注滿 25 分鐘得 1 枚，當天第一次專注另外加 1 枚。商店每天可以按一次「領取」再拿 1 枚（Plus 拿 5 枚）。幣可以買你已經拿過的貼紙副本，貼在手帳裡。罐子裡永遠只有你靠專注拿到的貼紙。</p></details>
+      <details><summary>Plus 有什麼？</summary><p>季節貼紙、多三隻陪伴貓、更多罐子外觀、專注時的環境音、手帳的更多紙張，以及每天 5 枚幣（免費是 1 枚）。每日貼紙和整個核心玩法永遠免費。</p></details>
+      <details><summary>可以改專注時間或目標嗎？</summary><p>可以。在「今天」畫面按時間旁邊的 − 和 +（5 到 90 分鐘），或到「我」裡設定。今天已經有專注時間的話，新的目標從明天開始算。</p></details>
+    </div>
+
+    <p class="eyebrow">購買</p>
+    <div class="card">
+      <details><summary>我買了 Plus 但沒生效</summary><p>到「我 › Mochidoro Plus」按<strong>還原購買</strong>。請確認登入的是購買時的 Apple 帳號。如果是需要家人核准的購買（詢問購買），核准後 Plus 會自動開啟。</p></details>
+      <details><summary>怎麼取消訂閱？</summary><p>訂閱由 Apple 管理：到「設定 › Apple 帳號 › 訂閱項目 › Mochidoro」，或到 <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> 申請退款。取消後 Plus 會保留到已付費期間結束。</p></details>
+      <details><summary>買的幣沒有到帳</summary><p>重新打開 App 一次；App Store 確認後幣就會入帳。一天後還是沒有的話，請附上 Apple 收據上的訂單編號聯絡我們。</p></details>
+    </div>
+
+    <p class="eyebrow">裝置與同步</p>
+    <div class="card">
+      <details><summary>iPhone 和 iPad 之間的 iCloud 同步</summary><p>在每一台裝置的「設定 › Apple 帳號 › iCloud › 儲存到 iCloud」裡開啟 Mochidoro。同步在背景進行，第一次可能要幾分鐘。資料不會存在我們的伺服器，是你自己的 iCloud。</p></details>
+      <details><summary>收不到通知</summary><p>確認「設定 › 通知 › Mochidoro」有允許。專注模式可能會擋掉通知；Mochidoro 的計時通知標記為「時效性」，只要你的專注模式允許時效性通知就會送達。</p></details>
+      <details><summary>小工具和 Apple Watch</summary><p>長按主畫面 › + 從小工具庫加入。先去看一次罐子，小工具才有圖。Watch App 會同步你的計時器；裝好後先在 iPhone 打開一次 Mochidoro。</p></details>
+      <details><summary>傾斜手機罐子不會動</summary><p>罐子用的是動作感測器，模擬器或沒有感測器的裝置上不會動，但還是可以點貼紙。低耗電模式下會用比較溫和的更新頻率。</p></details>
+    </div>
+
+    <p class="eyebrow">你的資料</p>
+    <div class="card">
+      <details><summary>怎麼刪掉所有資料？</summary><p>刪除 App 即可。如果有開 iCloud 同步，請另外到「設定 › Apple 帳號 › iCloud › 管理儲存空間」移除 Mochidoro 的資料。詳見<a href="privacy.html">隱私權政策</a>：我們沒有留存你的任何東西。</p></details>
+    </div>
+
+    <p class="eyebrow">聯絡</p>
+    <div class="card">
+      <h2>找真人</h2>
+      <p class="contact-mail">Email：<a href="#">—</a></p>
+      <p>發現 bug 或有想法？到 <a href="https://github.com/chi0313/mochidoro-site/issues" target="_blank" rel="noopener">GitHub</a> 開一個 issue，請附上 iPhone 機型和 iOS 版本。</p>
+      <p>條款：購買適用 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple 的標準使用者授權合約</a>。</p>
+    </div>
+  </div>
+
+  <!-- 日本語 -->
+  <div data-lang="ja">
+    <p class="eyebrow">使い方</p>
+    <div class="card">
+      <details open><summary>ステッカーはどうやって手に入る？</summary><p>集中セッションを終えるたびに、小さな形が瓶に落ちます。1 日の目標（「わたし」で分単位で設定）に達すると猫が 1 匹落ちてきます。さらに続けると、目標をもう一周するごとにもう 1 匹、1 日最大 3 匹まで。猫が 1、7、30、50、100、200、365 匹になるとマイルストーン猫がもらえます。</p></details>
+      <details><summary>肉球コインとは？</summary><p>1 日の集中 25 分ごとに 1 枚、その日最初のセッションでさらに 1 枚。ショップで 1 日 1 回「受け取る」をタップするともう 1 枚（Plus なら 5 枚）。コインで、すでに手に入れたステッカーの複製を買ってブックに貼れます。瓶には集中して得たものだけが入ります。</p></details>
+      <details><summary>Plus には何が含まれる？</summary><p>季節のステッカー、相棒猫が 3 匹追加、瓶の見た目、集中中の環境音、ブックの紙の追加、そして 1 日 1 枚の代わりに 5 枚のコイン。毎日のステッカーと基本の遊びはずっと無料です。</p></details>
+      <details><summary>集中時間や目標は変えられる？</summary><p>はい。「今日」画面で時間の横の − と +（5〜90 分）、または「わたし」で設定できます。今日すでに集中時間がある場合、新しい目標は明日から適用されます。</p></details>
+    </div>
+
+    <p class="eyebrow">購入</p>
+    <div class="card">
+      <details><summary>Plus を買ったのに有効にならない</summary><p>「わたし › Mochidoro Plus」で<strong>購入を復元</strong>をタップしてください。購入時と同じ Apple アカウントでサインインしているか確認を。家族の承認が必要な購入（承認と購入のリクエスト）は、承認されると Plus が自動でオンになります。</p></details>
+      <details><summary>サブスクリプションの解約方法</summary><p>サブスクリプションは Apple が管理しています。「設定 › Apple アカウント › サブスクリプション › Mochidoro」から、返金は <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> から。解約しても支払い済みの期間が終わるまで Plus は使えます。</p></details>
+      <details><summary>買ったコインが届かない</summary><p>アプリを一度開き直してください。App Store の確認が済み次第、加算されます。1 日たっても届かない場合は、Apple の領収書にある注文番号を添えてご連絡ください。</p></details>
+    </div>
+
+    <p class="eyebrow">端末と同期</p>
+    <div class="card">
+      <details><summary>iPhone と iPad の iCloud 同期</summary><p>各端末の「設定 › Apple アカウント › iCloud › iCloud に保存」で Mochidoro をオンにしてください。同期はバックグラウンドで行われ、初回は数分かかることがあります。私たちのサーバーには何も保存されません。あなた自身の iCloud です。</p></details>
+      <details><summary>通知が届かない</summary><p>「設定 › 通知 › Mochidoro」が許可されているか確認してください。集中モードで隠れることがあります。Mochidoro のタイマー通知は「時間的制約あり」として送るので、集中モードがそれを許可していれば届きます。</p></details>
+      <details><summary>ウィジェットと Apple Watch</summary><p>ホーム画面を長押し › + のウィジェットギャラリーから追加してください。瓶を一度開くとウィジェットに画像が出ます。Watch アプリはタイマーを映します。インストール後、iPhone で Mochidoro を一度開いてください。</p></details>
+      <details><summary>端末を傾けても瓶が動かない</summary><p>瓶はモーションセンサーを使います。シミュレータやセンサーのない端末では動きませんが、ステッカーのタップはできます。低電力モードでは控えめなフレームレートになります。</p></details>
+    </div>
+
+    <p class="eyebrow">あなたのデータ</p>
+    <div class="card">
+      <details><summary>すべて削除するには？</summary><p>アプリを削除してください。iCloud 同期をオンにしていた場合は、「設定 › Apple アカウント › iCloud › ストレージを管理」からも Mochidoro のデータを削除してください。<a href="privacy.html">プライバシーポリシー</a>のとおり、私たちはあなたのデータを持っていません。</p></details>
+    </div>
+
+    <p class="eyebrow">連絡先</p>
+    <div class="card">
+      <h2>人に連絡する</h2>
+      <p class="contact-mail">メール：<a href="#">—</a></p>
+      <p>バグやアイデアは <a href="https://github.com/chi0313/mochidoro-site/issues" target="_blank" rel="noopener">GitHub</a> で issue を作ってください。iPhone の機種と iOS のバージョンを添えていただけると助かります。</p>
+      <p>規約：購入には <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple の標準 EULA</a> が適用されます。</p>
+    </div>
+  </div>
+
+  <!-- 한국어 -->
+  <div data-lang="ko">
+    <p class="eyebrow">이렇게 놀아요</p>
+    <div class="card">
+      <details open><summary>스티커는 어떻게 얻나요?</summary><p>집중 세션을 마칠 때마다 작은 모양 하나가 병에 떨어져요. 하루 목표(「나」에서 분 단위로 설정)를 달성하면 고양이 한 마리가 떨어지고, 계속하면 목표 한 바퀴마다 한 마리씩, 하루 최대 세 마리까지. 고양이가 1, 7, 30, 50, 100, 200, 365마리가 되면 기념 고양이가 와요.</p></details>
+      <details><summary>발바닥 코인이 뭔가요?</summary><p>하루에 집중 25분마다 1개, 그날 첫 세션에 1개 더. 상점에서 하루 한 번 「받기」를 누르면 1개 더(Plus는 5개). 코인으로는 이미 얻은 스티커의 복제본을 사서 북에 붙일 수 있어요. 병에는 집중해서 얻은 것만 들어갑니다.</p></details>
+      <details><summary>Plus에는 무엇이 있나요?</summary><p>계절 스티커, 동반 고양이 3마리 추가, 병 모양 추가, 집중 중 환경음, 북의 종이 추가, 그리고 하루 1개 대신 5개의 코인. 매일의 스티커와 기본 놀이는 영원히 무료예요.</p></details>
+      <details><summary>집중 시간이나 목표를 바꿀 수 있나요?</summary><p>네. 「오늘」 화면에서 시간 옆의 −와 +(5~90분)를 누르거나 「나」에서 설정하세요. 오늘 이미 집중 시간이 있으면 새 목표는 내일부터 적용됩니다.</p></details>
+    </div>
+
+    <p class="eyebrow">구매</p>
+    <div class="card">
+      <details><summary>Plus를 샀는데 켜지지 않아요</summary><p>「나 › Mochidoro Plus」에서 <strong>구매 복원</strong>을 누르세요. 구매할 때 쓴 Apple 계정으로 로그인되어 있는지 확인해 주세요. 가족 승인이 필요한 구매(구입 요청)라면 승인 후 Plus가 저절로 켜져요.</p></details>
+      <details><summary>구독은 어떻게 취소하나요?</summary><p>구독은 Apple이 관리해요. 「설정 › Apple 계정 › 구독 › Mochidoro」에서 취소하거나 <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>에서 환불을 요청하세요. 취소해도 결제한 기간이 끝날 때까지 Plus를 쓸 수 있어요.</p></details>
+      <details><summary>산 코인이 들어오지 않아요</summary><p>앱을 한 번 다시 열어 주세요. App Store가 확인하는 대로 들어옵니다. 하루가 지나도 없다면 Apple 영수증의 주문 번호와 함께 연락해 주세요.</p></details>
+    </div>
+
+    <p class="eyebrow">기기와 동기화</p>
+    <div class="card">
+      <details><summary>iPhone과 iPad 사이 iCloud 동기화</summary><p>모든 기기에서 「설정 › Apple 계정 › iCloud › iCloud에 저장」의 Mochidoro를 켜 주세요. 동기화는 백그라운드에서 진행되고 처음엔 몇 분 걸릴 수 있어요. 우리 서버에는 아무것도 저장되지 않는, 나만의 iCloud예요.</p></details>
+      <details><summary>알림이 오지 않아요</summary><p>「설정 › 알림 › Mochidoro」가 허용되어 있는지 확인하세요. 집중 모드가 알림을 가릴 수 있어요. Mochidoro의 타이머 알림은 「시간에 민감한 알림」으로 보내므로, 집중 모드에서 이를 허용하면 도착합니다.</p></details>
+      <details><summary>위젯과 Apple Watch</summary><p>홈 화면을 길게 누르고 › +에서 위젯을 추가하세요. 병을 한 번 열어야 위젯에 그림이 나와요. Watch 앱은 타이머를 그대로 보여줍니다. 설치 후 iPhone에서 Mochidoro를 한 번 열어 주세요.</p></details>
+      <details><summary>휴대폰을 기울여도 병이 움직이지 않아요</summary><p>병은 모션 센서를 써요. 시뮬레이터나 센서가 없는 기기에서는 움직이지 않지만 스티커는 탭할 수 있어요. 저전력 모드에서는 더 부드러운 프레임 속도로 동작합니다.</p></details>
+    </div>
+
+    <p class="eyebrow">내 데이터</p>
+    <div class="card">
+      <details><summary>전부 지우려면?</summary><p>앱을 삭제하세요. iCloud 동기화를 켰었다면 「설정 › Apple 계정 › iCloud › 저장 공간 관리」에서도 Mochidoro 데이터를 지워 주세요. <a href="privacy.html">개인정보 처리방침</a>처럼, 우리는 당신의 데이터를 가지고 있지 않아요.</p></details>
+    </div>
+
+    <p class="eyebrow">문의</p>
+    <div class="card">
+      <h2>사람에게 연락하기</h2>
+      <p class="contact-mail">이메일: <a href="#">—</a></p>
+      <p>버그나 아이디어가 있다면 <a href="https://github.com/chi0313/mochidoro-site/issues" target="_blank" rel="noopener">GitHub</a>에 이슈를 남겨 주세요. iPhone 모델과 iOS 버전을 함께 적어 주시면 좋아요.</p>
+      <p>약관: 구매에는 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple의 표준 EULA</a>가 적용됩니다.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="./">Mochidoro</a> · <a href="privacy.html"><span data-lang="en">Privacy</span><span data-lang="zh-Hant">隱私權</span><span data-lang="ja">プライバシー</span><span data-lang="ko">개인정보</span></a> · <a href="support.html"><span data-lang="en">Support</span><span data-lang="zh-Hant">支援</span><span data-lang="ja">サポート</span><span data-lang="ko">지원</span></a><br>© 2026 VCVC, LLC
+  </footer>
+</div>
+</body>
+</html>

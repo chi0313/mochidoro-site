@@ -1,0 +1,76 @@
+/* Mochidoro site: the app's paper, ink and rounded type, on the web. */
+:root {
+  --paper: #fffcf6; --card: #ffffff; --ink: #292624; --muted: rgba(41,38,36,.62); --faint: rgba(41,38,36,.38);
+  --line: rgba(41,38,36,.18); --butter: #facc8c; --sky: #bdcceb; --sage: #b8d6b8; --straw: #f2b3ad; --lav: #d9c7e6;
+  --shadow: 0 10px 30px rgba(41,38,36,.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1f1d1a; --card: #2a2724; --ink: #f3ede2; --muted: rgba(243,237,226,.66); --faint: rgba(243,237,226,.42);
+    --line: rgba(243,237,226,.2); --butter: #c99a55; --sky: #7f93c2; --sage: #7fa47f; --straw: #c27f78; --lav: #9d88ad;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Nunito", "Noto Sans TC", "Noto Sans JP", "Noto Sans KR", -apple-system, "SF Pro Rounded", system-ui, sans-serif;
+  font-size: 17px; line-height: 1.65; padding: 0 16px 56px;
+}
+html[lang="zh-Hant"] body { font-family: "Nunito", "Noto Sans TC", -apple-system, system-ui, sans-serif; }
+html[lang="ja"] body { font-family: "Nunito", "Noto Sans JP", -apple-system, system-ui, sans-serif; }
+html[lang="ko"] body { font-family: "Nunito", "Noto Sans KR", -apple-system, system-ui, sans-serif; }
+a { color: var(--ink); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.wrap { max-width: 720px; margin: 0 auto; }
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 22px 0 8px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 18px; }
+.brand img { width: 36px; height: 36px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+.langs { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.langs button {
+  font: inherit; font-size: 13px; font-weight: 700; color: var(--ink); background: var(--paper);
+  border: 1.6px solid var(--ink); border-radius: 999px; padding: 4px 11px; cursor: pointer;
+}
+.langs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.hero { display: flex; align-items: flex-end; gap: 18px; margin: 26px 0 10px; }
+.hero img { width: 110px; height: auto; flex: none; }
+.hero h1 { font-size: 34px; line-height: 1.15; margin: 0 0 6px; font-weight: 800; letter-spacing: -.01em; }
+.hero p { margin: 0; color: var(--muted); }
+.card {
+  background: var(--card); border: 1.8px solid var(--ink); border-radius: 18px; padding: 22px 22px 6px; margin: 18px 0;
+  box-shadow: 1.5px 1.5px 0 0 var(--line), var(--shadow); position: relative;
+}
+.card h2 { font-size: 20px; margin: 0 0 8px; font-weight: 800; }
+.card h3 { font-size: 17px; margin: 18px 0 4px; font-weight: 800; }
+.card p, .card li { margin: 0 0 14px; }
+.card ul { padding-left: 20px; margin: 0 0 14px; }
+.card li { margin-bottom: 8px; }
+.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin: 26px 4px 0; }
+.pill { display: inline-block; font-size: 12px; font-weight: 800; padding: 2px 10px; border-radius: 999px; border: 1.4px solid var(--ink); background: var(--butter); color: #292624; margin-left: 6px; vertical-align: middle; }
+.nav { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 8px; }
+.nav a {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 800;
+  border: 1.8px solid var(--ink); border-radius: 999px; padding: 10px 18px; background: var(--card);
+  box-shadow: 1.5px 1.5px 0 0 var(--line);
+}
+.nav a.primary { background: var(--ink); color: var(--paper); }
+details { border-top: 1px dashed var(--line); padding: 12px 0; }
+details:first-of-type { border-top: 0; }
+summary { cursor: pointer; font-weight: 800; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-weight: 800; color: var(--faint); flex: none; }
+details[open] summary::after { content: "–"; }
+details p { margin: 10px 0 4px; color: var(--muted); }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; background: rgba(41,38,36,.06); padding: 1px 6px; border-radius: 6px; }
+footer { color: var(--faint); font-size: 13px; text-align: center; margin-top: 40px; }
+footer a { color: var(--faint); }
+.meta { color: var(--faint); font-size: 13px; margin: -4px 0 16px 4px; }
+[data-lang] { display: none; }
+[data-lang].on { display: block; }
+span[data-lang].on, a[data-lang].on { display: inline; }
+@media (max-width: 480px) {
+  .hero { gap: 12px; }
+  .hero img { width: 84px; }
+  .hero h1 { font-size: 28px; }
+  .card { padding: 18px 16px 4px; }
+}
