@@ -1,8 +1,8 @@
-// One page, four languages: blocks marked data-lang="en|zh-Hant|ja|ko" are shown for the
+// One page, five languages: blocks marked data-lang="en|de|zh-Hant|ja|ko" are shown for the
 // chosen language. Order: ?lang=, then what the visitor chose before, then the browser.
 (function () {
-  const supported = ['en', 'zh-Hant', 'ja', 'ko'];
-  const labels = { en: 'English', 'zh-Hant': '繁體中文', ja: '日本語', ko: '한국어' };
+  const supported = ['en', 'de', 'zh-Hant', 'ja', 'ko'];
+  const labels = { en: 'English', de: 'Deutsch', 'zh-Hant': '繁體中文', ja: '日本語', ko: '한국어' };
   function detect() {
     const q = new URLSearchParams(location.search).get('lang');
     if (q && supported.includes(q)) return q;
@@ -12,6 +12,7 @@
       if (low.startsWith('zh')) return (low.includes('cn') || low.includes('hans') || low.includes('sg')) ? 'en' : 'zh-Hant';
       if (low.startsWith('ja')) return 'ja';
       if (low.startsWith('ko')) return 'ko';
+      if (low.startsWith('de')) return 'de';
       if (low.startsWith('en')) return 'en';
     }
     return 'en';
